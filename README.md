@@ -35,26 +35,18 @@ Stellen Sie vor dem Start sicher, dass Folgendes installiert ist:
 
 ## 🚀 Erste Schritte
 
-### 1. Repository klonen
+### Schnellstart mit Docker (Empfohlen)
+
+Die einfachste Art, die Anwendung zu starten:
 
 ```bash
-git clone https://github.com/your-username/web-boardgame-rental-open-source.git
-cd web-boardgame-rental-open-source
-```
+# Repository klonen
+git clone https://github.com/kaleidos-code/boardgame-rental.git
+cd boardgame-rental
 
-### 2. Abhängigkeiten installieren
-
-```bash
-yarn install
-```
-
-### 3. Umgebung einrichten
-
-Kopieren Sie die Beispiel-Umgebungsdatei und konfigurieren Sie Ihre Einstellungen:
-
-```bash
+# Umgebungsdatei erstellen
 cp env.example .env
-```
+
 
 Bearbeiten Sie die `.env` Datei mit Ihrer spezifischen Konfiguration:
 
@@ -79,7 +71,39 @@ NEXTAUTH_SECRET=ihr_nextauth_secret
 NEXTAUTH_URL=http://localhost:3000
 ```
 
-### 4. Datenbank starten
+# Anwendung mit Docker starten (baut automatisch alle Images)
+yarn docker:app
+```
+
+**Das war's!** Die Anwendung ist nun unter [http://localhost:3000](http://localhost:3000) verfügbar.
+
+## 🛠 Entwicklungsmodus
+
+Für die lokale Entwicklung mit Hot-Reload und Debugging:
+
+#### 1. Repository klonen
+
+```bash
+git clone https://github.com/kaleidos-code/boardgame-rental
+cd web-boardgame-rental
+```
+
+#### 2. Abhängigkeiten installieren
+
+```bash
+yarn install
+```
+
+#### 3. Umgebung einrichten
+
+Kopieren Sie die Beispiel-Umgebungsdatei und konfigurieren Sie Ihre Einstellungen:
+
+```bash
+cp env.example .env
+```
+
+
+#### 4. Datenbank starten
 
 **Wichtig**: Sie müssen den Datenbank-Container vor dem Entwicklungsserver starten:
 
@@ -89,7 +113,7 @@ yarn docker:dev
 
 Dieser Befehl startet einen PostgreSQL-Container mit Docker Compose.
 
-### 5. Datenbank einrichten
+#### 5. Datenbank einrichten
 
 Prisma Client generieren und Migrationen ausführen:
 
@@ -98,7 +122,7 @@ yarn prisma:generate
 npx prisma migrate deploy
 ```
 
-### 6. Datenbank befüllen
+#### 6. Datenbank befüllen
 
 Befüllen Sie die Datenbank mit Anfangsdaten einschließlich Rollen, Berechtigungen und Beispielbenutzern:
 
@@ -111,7 +135,7 @@ Dies erstellt:
 - Beispiel-Benutzerkonten
 - Beispiel-Brettspieldaten (falls verfügbar)
 
-### 7. Entwicklungsserver starten
+#### 7. Entwicklungsserver starten
 
 ```bash
 yarn dev
@@ -269,12 +293,7 @@ curl -X POST http://localhost:3000/api/cron/orphans \
 
 ### Externer Scheduler
 
-Für automatisierte Ausführung empfehlen wir die Verwendung des separaten Scheduler-Services:
-
-#### Verwandte Projekte
-- **Scheduler**: [board-game-rental-scheduler](https://github.com/your-org/board-game-rental-scheduler) (separates Repository)
-
-Der Scheduler-Service kann konfiguriert werden, um diese Endpunkte in regelmäßigen Abständen aufzurufen (z.B. täglich für Fälligkeitsprüfungen, wöchentlich für Waisen-Bereinigung).
+Für automatisierte Ausführung empfehlen wir die Verwendung des separaten Scheduler-Services
 
 ## 📄 Lizenz
 
@@ -284,7 +303,7 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE
 
 Falls Sie auf Probleme stoßen oder Fragen haben:
 
-1. Überprüfen Sie die [Issues](https://github.com/your-username/web-boardgame-rental-open-source/issues) Seite
+1. Überprüfen Sie die [Issues](https://github.com/kaleidos-code/boardgame-rental/issues) Seite
 2. Erstellen Sie ein neues Issue, falls Ihr Problem noch nicht behandelt wurde
 3. Geben Sie detaillierte Informationen über Ihre Umgebung und das Problem an
 
