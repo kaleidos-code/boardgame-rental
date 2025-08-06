@@ -1,0 +1,15 @@
+.custom-pagination-control {
+  background-color: transparent;
+  border: none;
+
+  @Media (max-width: 1023px) {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 14px;
+  }
+
+  &[data-active='true'] {
+    background-color: var(--pagination-active-bg);
+  }
+}

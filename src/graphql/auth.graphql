@@ -1,0 +1,15 @@
+mutation signUp ($data: SignUpInput!) {
+  signUp (data: $data) 
+}
+
+mutation forgotPassword ($email: String!) {
+  forgotPassword (email: $email) 
+}
+
+mutation setPassword ($data: SetPasswordInput!) {
+  setPassword (data: $data) 
+}
+
+mutation changePassword ($data: PasswordChangeInput!) {
+  changePassword (data: $data) 
+}

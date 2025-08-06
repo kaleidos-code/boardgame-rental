@@ -1,0 +1,15 @@
+.custom-checkbox-input {
+  border-radius: 0%;
+  border-color: var(--mantine-color-gray-2);
+
+  &:checked {
+    border-color: var(--mantine-color-blue-5);
+  }
+}
+
+.custom-checkbox-icon {
+  width: 100%!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

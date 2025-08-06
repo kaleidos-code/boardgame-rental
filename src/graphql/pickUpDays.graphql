@@ -1,0 +1,19 @@
+fragment PickUpDayData on PickUpDay {
+  dayOfWeek
+  pickUpTimes {
+    from
+    to
+  }
+}
+
+query pickUpDays {
+  pickUpDays {
+    ...PickUpDayData
+  }
+}
+
+mutation createUpdatePickUpDay($data: [CreateUpdatePickUpDayInput!]!) {
+  createUpdatePickUpDay(data: $data) {
+    ...PickUpDayData
+  }
+}

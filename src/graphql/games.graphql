@@ -1,0 +1,83 @@
+fragment GameData on Game {
+  id
+  ean
+  title
+  publisher
+  minAge
+  maxAge
+  gameShortId
+  minPlayers
+  maxPlayers
+  minDuration
+  maxDuration
+  createdAt
+  availableUnits
+  availableAt
+  available @client
+  incomplete @client
+  texts
+  tags {
+    ...TagData
+  }
+  units {
+    ...GameUnitData
+  }
+  files {
+    ...FileData
+  }
+}
+
+
+query game($id: String!) {
+  game(id: $id) {
+    ...GameData
+  }
+}
+
+query games {
+  games {
+    ...GameData
+  }
+}
+
+query gamesByIds($games: [String!]!) {
+  gamesByIds(games: $games) {
+    ...GameData
+  }
+}
+
+query gamesPaginated($offset: Int!, $limit: Int!, $orderBy: [OrderInput!], $filterBy: [FilterInput!], $search: String) {
+  gamesPaginated(offset: $offset, limit: $limit, orderBy: $orderBy, filterBy: $filterBy, search: $search) {
+    nodes {
+      ...GameData
+    }
+    pageInfo {
+      currentPage
+      totalPages
+      perPage
+    }
+    totalCount
+  }
+}
+
+mutation createGame($data: CreateGameInput!, $uploads: [FileScalar!]) {
+  createGame(data: $data, uploads: $uploads) {
+    ...GameData
+  }
+}
+
+mutation updateGame($id: String!, $data: UpdateGameInput!, $uploads: [FileScalar!]) {
+  updateGame(id: $id, data: $data, uploads: $uploads) {
+    ...GameData
+  }
+}
+
+mutation softDeleteGame($id: String!) {
+  softDeleteGame(id: $id) {
+    ...GameData
+  }
+}
+
+mutation importGames($upload: FileScalar!) {
+  importGames(upload: $upload)
+}

@@ -1,0 +1,11 @@
+.custom-tabs-tab {
+  &:hover {
+    background-color: var(--mantine-color-gray-1);
+  }
+}
+
+.custom-tabs-list {
+  &::before {
+    border-color: var(--mantine-color-gray-2);
+  }
+}

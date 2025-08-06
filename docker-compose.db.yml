@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:14-alpine
+    container_name: ${COMPOSE_PROJECT_NAME}-postgres
+    ports:
+      - ${DB_PORT}:${POSTGRES_PORT}
+    env_file:
+      - ${ENV_FILE:-.env}
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    command: -p ${POSTGRES_PORT}
+
+volumes:
+  postgres:
+    name: ${POSTGRES_VOLUME_NAME}

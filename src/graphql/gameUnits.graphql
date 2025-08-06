@@ -1,0 +1,17 @@
+fragment GameUnitData on GameUnit {
+  id
+  unitShortId
+  available
+  incomplete
+  prefixedShortId
+  inStock
+  weight
+  texts
+  game {
+    id
+    title 
+  }
+  rentals {
+    id
+  }
+}

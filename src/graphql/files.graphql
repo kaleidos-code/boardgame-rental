@@ -1,0 +1,10 @@
+fragment FileData on File {
+  id
+  id
+  fileName
+  key
+  mimeType
+  size
+  url
+  dataUrl
+}

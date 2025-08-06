@@ -1,0 +1,11 @@
+directive @client on FIELD
+directive @nonreactive on FIELD
+
+extend type Game {
+  available: Boolean!
+  incomplete: Boolean!
+}
+
+extend type Reservation {
+  overDue: Boolean!
+}

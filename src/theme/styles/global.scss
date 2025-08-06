@@ -1,0 +1,39 @@
+@import 'material-icons/iconfont/material-icons.scss';
+@import '@mantine/core/styles.layer.css';
+@import 'mantine-datatable/dist/styles.layer.css';
+@import '@mantine/dates/styles.css';
+@import '@mantine/carousel/styles.css';
+
+@layer mantine, mantine-datatable;
+
+@import './components.scss';
+@import './font.scss';
+
+a, img {
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -ms-user-drag: none; 
+}
+
+img{
+  user-select: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+
+  font-variant-numeric: lining-nums!important;
+
+  @media (min-width: 1024px) {
+    overscroll-behavior: none;
+    overflow: hidden;
+  } 
+
+  background-color: var(--mantine-color-gray-0);
+
+  .mantine-Popover-dropdown {
+    z-index: 2000!important;
+  }
+}

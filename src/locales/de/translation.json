@@ -1,0 +1,660 @@
+{
+  "action": {
+    "accept": "Akzeptieren",
+    "addFilter": "Filter hinzufügen",
+    "addToCart": "In den Ausleihkorb",
+    "applyFilter": "Filter anwenden",
+    "autoFill": "Automatisch ausfüllen",
+    "backToHome": "Zurück zur Startseite",
+    "backToLogin": "Zurück zum Login",
+    "cancel": "Abbrechen",
+    "cancelReservation": "Reservierung stornieren",
+    "changePassword": "Passwort ändern",
+    "clear": "Leeren",
+    "clearCart": "Ausleihkorb leeren",
+    "clearFilter": "Filter zurücksetzen",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "confirmPacked": "Spiele sind abholbereit",
+    "confirmPickup": "Ausleihe bestätigen",
+    "confirmReturn": "Rückgabe bestätigen",
+    "continue": "Weiter",
+    "createGame": "Spiel hinzufügen",
+    "createUser": "Benutzer:in hinzufügen",
+    "delete": "Löschen",
+    "deleteEntry": "Eintrag löschen",
+    "dropFile": "Datei hier ablegen oder klicken, um Datei auszuwählen",
+    "dropFiles": "Dateien hier ablegen oder klicken, um Dateien auszuwählen",
+    "edit": "Bearbeiten",
+    "editEntry": "Eintrag bearbeiten",
+    "editRental": "Ausleihe bearbeiten",
+    "editReservation": "Reservierung bearbeiten",
+    "exportLabels": "Labels exportieren",
+    "filter": "Filter",
+    "import": "Importieren",
+    "importGames": "Spiele importieren",
+    "login": "Anmelden",
+    "loginWithApple": "Mit Apple anmelden",
+    "loginWithGoogle": "Mit Google anmelden",
+    "logout": "Abmelden",
+    "moreInfo": "Mehr erfahren",
+    "removeFilters": "Filter entfernen",
+    "rent": "Ausleihen",
+    "reserve": "Reservieren",
+    "resetPassword": "Passwort zurücksetzen",
+    "save": "Speichern",
+    "scan": "Scannen",
+    "sendOptIn": "Opt-In senden",
+    "sendOptInAgain": "Opt-In erneut senden",
+    "setPassword": "Passwort setzen",
+    "showEntry": "Eintrag anzeigen",
+    "signUp": "Registrieren",
+    "submit": "Absenden",
+    "toGameLibrary": "Zur Spieleübersicht",
+    "toHome": "Zur Startseite"
+  },
+  "app": {
+    "subtitle": "Leih dir kostenlos Brettspiele aus",
+    "title": "Brettspiele-Verleih"
+  },
+  "auth": {
+    "appDescription": "Hier kannst du kostenlos eine Vielzahl an Gesellschaftsspielen aus den unterschiedlichsten Genres ausleihen, ideal für unvergessliche Spieleabende mit deinen Freunden. ",
+    "appTitle": "Brettspieleverleih",
+    "createAccount": "Jetzt registrieren",
+    "forgetPassword": {
+      "description": "Gib deine E-Mail-Adresse ein, um dein Passwort zurückzusetzen.",
+      "success": "Wir haben dir eine E-Mail mit einem Link zum Zurücksetzen deines Passworts gesendet. Bitte überprüfe dein Postfach.",
+      "title": "Passwort vergessen?"
+    },
+    "login": {
+      "noAccountYet": "Du hast noch keinen Account?",
+      "title": "Anmelden"
+    },
+    "optIn": {
+      "alreadyVerified": "Deine E-Mail-Adresse wurde am {{date}} bereits bestätigt.",
+      "error": "Fehler beim Bestätigen der E-Mail-Adresse.",
+      "errorMessage": "Ungültiger Token oder E-Mail-Adresse. Möglicherweiße ist der Bestätungslink abgelaufen.",
+      "setPassword": "Setze dein Passwort",
+      "setPasswordDescription": "Bitte setze dein Passwort, um deinen Account zu aktivieren.",
+      "setPasswordSuccess": "Passwort erfolgreich gesetzt",
+      "setPasswordSuccessMessage": "Dein Passwort wurde erfolgreich gesetzt. Du kannst dich nun mit deinem Account anmelden.",
+      "success": "Deine E-Mail-Adresse wurde erfolgreich bestätigt.",
+      "successMessage": "Du kannst dich nun mit deinem Account anmelden und Spiele ausleihen."
+    },
+    "resetPassword": {
+      "description": "Gib dein neues Passwort ein.",
+      "invalidToken": "Der Token ist ungültig oder abgelaufen.",
+      "requestNewPassword": "Bitte fordere einen neuen Link zum Zurücksetzen deines Passworts an.",
+      "success": "Dein Passwort wurde erfolgreich zurückgesetzt.",
+      "title": "Passwort zurücksetzen",
+      "tryLogin": "Du kannst dich nun mit deinem neuen Passwort anmelden. Viel Spaß beim Spielen!"
+    },
+    "signUp": {
+      "createAccount": "Jetzt registrieren",
+      "createAccountDescription": "Erstelle einen neuen Account",
+      "description": "Erstelle einen neuen Account, um Spiele auszuleihen.",
+      "success": "Wir haben dir eine E-Mail mit einem Bestätigungslink gesendet. Bitte bestätige deine E-Mail-Adresse, um deinen Account zu aktivieren und um Spiele auszuleihen.",
+      "successTitle": "Account erfolgreich erstellt",
+      "title": "Registrieren",
+      "verifyEmail": "E-Mail-Adresse bestätigen",
+      "verifyEmailDescription": "Bitte bestätige deine E-Mail-Adresse, um deinen Account zu aktivieren."
+    },
+    "terms": "Ich akzeptiere die <privacy>Datenschutzbestimmungen</privacy> und die <terms>Nutzungsbedingungen</terms>.",
+    "welcome": "Willkommen bei unserem Brettspieleverleih!"
+  },
+  "common": {
+    "age": "Alter",
+    "available": "Verfügbar",
+    "birthdate": "Gerburtsdatum",
+    "bookingId": "Buchungs-ID",
+    "categories": "Kategorien",
+    "city": "Stadt",
+    "complete": "Vollständig",
+    "confirmPassword": "Passwort bestätigen",
+    "contents": "Spieleinhalt",
+    "coverImage": "Titelbild",
+    "createdAt": "Erstellt am",
+    "description": "Beschreibung",
+    "developedBy": "Entwickelt von <a>kaleidos:code GmbH</a>",
+    "doubleOptInSuccess": "Die E-Mail mit dem Opt-In wurde erfolgreich gesendet. Bitte überprüfe dein Postfach.",
+    "dueDate": "Fälligkeitsdatum",
+    "duration": "Spieldauer",
+    "durationMax": "maximal {{count}} Minuten",
+    "durationMin": "mindestens {{count}} Minuten",
+    "durationSpan": "{{min}} - {{max}} Minuten",
+    "ean": "EAN",
+    "email": "E-Mail",
+    "emailNotVerified": "E-Mail-Adresse nicht bestätigt",
+    "faq": "FAQ",
+    "fileSize": "Dateigröße: {{size}}",
+    "firstname": "Vorname",
+    "from": "von",
+    "fromAge": "ab",
+    "fullname": "{{firstname}} {{lastname}}",
+    "game": "Spiel",
+    "gameTags": "Spiel-Tags",
+    "gameTagsPlaceholder": "z.B. Kartenspiel, Würfelspiel",
+    "gameUnit": "Spielexemplar",
+    "gameUnitId": "Exemplar-ID",
+    "gameUnits": "Spielexemplare",
+    "gameUnitsDescription": "Hier kannst du Exemplare des Spiels hinzufügen oder entfernen.",
+    "gameWithUnit": "{{title}} ({{unit}})",
+    "games": "Spiele",
+    "ganeUnitId": "Exemplar-ID",
+    "google": "Google",
+    "images": "Bilder",
+    "imagesPlaceholder": "Bilddatei auswählen",
+    "imprint": "Impressum",
+    "incomplete": "Unvollständig",
+    "lastname": "Nachname",
+    "maxAge": "Maximales Alter",
+    "maxDuration": "Maximale Spieldauer",
+    "maxPlayers": "Maximale Spieleranzahl",
+    "minAge": "Minimales Alter",
+    "minDuration": "Minimale Spieldauer",
+    "minPlayers": "Minimale Spieleranzahl",
+    "missingParts": "Fehlende Teile",
+    "myAccount": "Mein Konto",
+    "new": "Neu",
+    "newUnit": "Neues Exemplar",
+    "no": "Nein",
+    "noEntries": "Keine Einträge vorhanden.",
+    "notInStock": "Aktuell nicht ausleihbar",
+    "oldPassword": "Altes Passwort",
+    "or": "Oder",
+    "other": "Sonstiges",
+    "overDue": "Überfällig",
+    "packed": "Abholbereit",
+    "password": "Passwort",
+    "perPage": "{{count}} pro Seite",
+    "pickDate": "Datum auswählen",
+    "pickUpDays": "Abholungszeiten",
+    "pickUpReturnDays": "Abhol- und Rückgabezeiten",
+    "pickUpTill": "Abholung bis: {{date}}",
+    "playerCount": "Spieleranzahl",
+    "postalCode": "Postleitzahl",
+    "privacy": "Datenschutz",
+    "profile": "Mein Profil",
+    "publisher": "Verlag",
+    "rentalCart": "Ausleihkorb",
+    "rented": "Verliehen",
+    "rentedAt": "Ausleidatum: {{date}}",
+    "rentedCount": "{{rented}}/{{total}}",
+    "renter": "Ausleiher:in",
+    "reservationCode": "Reservierungscode",
+    "reservationCodeWithCode": "$t(common.reservationCode): {{code}}",
+    "reservedAt": "Reservierungsdatum: {{date}}",
+    "returnDate": "Rückgabedatum: {{date}}",
+    "returnDays": "Rückgabezeiten",
+    "returnedAt": "Zurückgegeben am",
+    "role": "Rolle",
+    "search": "Suche",
+    "searchPlaceholder": "Suchbegriff eingeben",
+    "settings": "Einstellungen",
+    "sorting": "Sortierung",
+    "status": {
+      "cancelled": "Storniert",
+      "completed": "Abgeschlossen",
+      "overdue": "Überfällig",
+      "packed": "Abholbereit",
+      "pending": "Ausstehend",
+      "rented": "Verliehen",
+      "returned": "Zurückgegeben",
+      "title": "Status"
+    },
+    "street": "Straße",
+    "telephone": "Telefon",
+    "terms": "Nutzungsbedingungen",
+    "timePeriodLabel": "{{ period }} Uhr",
+    "title": "Titel",
+    "to": "bis",
+    "unitPrefix": "Einheit Präfix",
+    "units": "Exemplare",
+    "upTo": "Bis zu {{count}}",
+    "weight": "Gewicht",
+    "yes": "Ja"
+  },
+  "dataTable": {
+    "columns": {
+      "actions": "Aktionen",
+      "bookingId": "$t(common.bookingId)",
+      "createdAt": "$t(common.createdAt)",
+      "dueDate": "$t(common.dueDate)",
+      "ean": "$t(common.ean)",
+      "email": "$t(common.email)",
+      "firstname": "$t(common.firstname)",
+      "game": "$t(common.game)",
+      "gameShortId": "ID",
+      "gameUnit": "$t(common.gameUnit)",
+      "gameUnits": "$t(common.gameUnits)",
+      "games": "$t(common.games)",
+      "lastname": "$t(common.lastname)",
+      "minAge": "$t(common.age)",
+      "overDue": "$t(common.overDue)",
+      "publisher": "$t(common.publisher)",
+      "renter": "$t(common.renter)",
+      "reservationCode": "$t(common.reservationCode)",
+      "returnedAt": "$t(common.returnedAt)",
+      "role": "$t(common.role)",
+      "status": "$t(common.status.title)",
+      "telephone": "Telefon",
+      "title": "$t(common.title)",
+      "units": "$t(common.units)"
+    },
+    "filterOperator": {
+      "eq": "ist gleich",
+      "gt": "größer als",
+      "gte": "größer oder gleich",
+      "in": "in",
+      "is": "ist",
+      "isNotNull": "ist nicht null",
+      "isNull": "ist null",
+      "like": "enthält",
+      "lt": "kleiner als",
+      "lte": "kleiner oder gleich",
+      "neq": "ist ungleich",
+      "nin": "nicht in",
+      "notLike": "enthält nicht"
+    },
+    "filterPanel": {
+      "column": "Spalte",
+      "operator": "Operator",
+      "value": "Wert"
+    },
+    "noRecords": "Keine Einträge gefunden.",
+    "paginationText": "{{from}} bis {{to}} von {{totalRecords}} Einträgen",
+    "recordsPerPage": "Einträge pro Seite"
+  },
+  "days": {
+    "friday": "Freitag",
+    "monday": "Montag",
+    "saturday": "Samstag",
+    "sunday": "Sonntag",
+    "thursday": "Donnerstag",
+    "tuesday": "Dienstag",
+    "wednesday": "Mittwoch"
+  },
+  "error": {
+    "api": {
+      "permissionDenied": "Du hast keine Berechtigung für diese Aktion."
+    },
+    "auth": {
+      "credentialsSignin": "Die Anmeldedaten sind nicht korrekt.",
+      "invalidToken": "Der Token ist ungültig oder abgelaufen",
+      "invalidTokenType": "Ungültiger Token-Typ",
+      "passwordInvalid": "Das eingebene Passwort ist nicht korrekt.",
+      "postalCodeInvalid": "Die eingebene Postleitzahl ist ungültig. Bitte überprüfe die Angabe.",
+      "resgistrationDisabled": "Die Registrierung ist aktuell deaktiviert.",
+      "termsNotAccepted": "Die Nutzungsbedingungen müssen akzeptiert werden.",
+      "tokenAlreadyUsed": "Der Token wurde bereits verwendet",
+      "tokenNotFound": "Token wurde nicht gefunden"
+    },
+    "default": "Ein Fehler ist aufgetreten, bitte versuche es später erneut.",
+    "gameList": {
+      "alreadyExists": "Ein Spiel mit der EAN, Titel oder dem Exemplar Prefix existiert bereits.",
+      "eanSearchError": "Fehler beim Suchen nach Informationen zu dem Spiel. Möglicherweise ist die EAN ungültig. Sollte das Problem weiterhin bestehen, versuche es später erneut.",
+      "exportError": "Fehler beim Exportieren der Labels."
+    },
+    "gameUnit": {
+      "alreadyRented": "Folgenden Exemplar(e) sind bereits verliehen: {{units}}",
+      "notAvailable": "Das Spiel ist aktuell nicht verfügbar.",
+      "notAvailableUnits": "Eins oder mehrere Exemplare sind aktuell nicht verfügbar: {{ games }}"
+    },
+    "import": {
+      "importGamesFailedColumns": "Die Spalten: <b>{{missingColumns}}</b> für die Spiele sind nicht in der Excel Datei vorhanden.",
+      "importTagsFailedColumns": "Die Spalten: <b>{{missingColumns}}</b> für die Kategorien sind nicht in der Excel Datei vorhanden."
+    },
+    "input": {
+      "canNotBeEmpty": "Darf nicht leer sein",
+      "dayInvalid": "Tage mit ungültigen Zeiten: {{days}}",
+      "eanInvalid": "Ungültige EAN",
+      "emailInvalid": "Ungültige E-Mail-Adresse",
+      "gameUnitNeeded": "Es muss mindestens ein Exemplar hinzugefügt werden",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "maxAgeInvalid": "Ungültiges maximales Alter",
+      "maxDurationInvalid": "Ungültige maximale Spieldauer",
+      "maxPlayersInvalid": "Ungültige maximale Spieleranzahl",
+      "minNumberInvalid": "Wert muss größer {{gt}} sein",
+      "mustBeAccepted": "Muss akzeptiert werden",
+      "mustBeNCharacters": "Muss {{count}} Zeichen lang sein",
+      "mustBeNumber": "Muss eine Zahl sein",
+      "numberRangeInvalid": "Wert muss größer als {{gt}} und kleiner als {{lt}} sein",
+      "postalCodeInvalid": "Ungültige Postleitzahl",
+      "unitPrefixInvalid": "Prefix muss aus 4 kleine Buchstaben bestehen"
+    },
+    "mailing": {
+      "sendMail": "Fehler beim Senden der E-Mail. Bitte versuche es später erneut."
+    },
+    "page": {
+      "404": "Die Seite wurde nicht gefunden.",
+      "500": "Ein Fehler ist aufgetreten. Bitte versuche es später erneut."
+    },
+    "password": {
+      "canNotBeSameAsOld": "Das Passwort darf nicht mit dem alten Passwort übereinstimmen.",
+      "notMatching": "Passwörter stimmen nicht überein.",
+      "notMatchingPattern": "Passwort entspricht nicht dem Vorgaben",
+      "passwordLength": "Das Passwort muss mindestens {{length}} Zeichen lang sein.",
+      "passwordNumber": "Das Passwort muss mindestens eine Zahl enthalten.",
+      "passwordSpecialCharacter": "Das Passwort muss mindestens ein Sonderzeichen enthalten:",
+      "passwordUppercase": "Das Passwort muss mindestens einen Großbuchstaben enthalten."
+    },
+    "pickUpDay": {
+      "pickUpTimesRequired": "Rückgabe- und Abholzeiten müssen angegeben werden"
+    },
+    "rental": {
+      "alreadyReturned": "Die Ausleihe wurde bereits zurückgegeben.",
+      "notFound": "Die Ausleihe wurde nicht gefunden."
+    },
+    "reservation": {
+      "canceldOrCompleted": "Die Reservierung wurde bereits storniert oder abgeschlossen.",
+      "maxActiveReservations": "Maximale Anzahl an aktiven Reservierungen überschritten! {{ count }} Reservierungen erlaubt.",
+      "maxGames": "Maximale Anzahl an Spielen überschritten",
+      "maxGamesReached": "Maximale Anzahl an ausgeliehenen Spielen ist erreicht. {{ available }} Spiele noch verfügbar.",
+      "notAllowed": "Du kannst keine Reservierung für dieses Spiel erstellen.",
+      "notFound": "Die Reservierung wurde nicht gefunden."
+    },
+    "role": {
+      "notFound": "Die Rolle wurde nicht gefunden."
+    },
+    "tag": {
+      "createFailed": "Fehler beim Erstellen des Tags."
+    },
+    "terms": {
+      "unacceptedTerms": "Die Datenschutzbestimmung muss akzeptiert werden."
+    },
+    "user": {
+      "alreadyExists": "Der/die Benutzer:in mit der E-Mail-Adresse existiert bereits.",
+      "emailAlreadyVerified": "Die E-Mail-Adresse wurde bereits bestätigt.",
+      "emailNotVerified": "Die E-Mail-Adresse wurde noch nicht bestätigt.",
+      "hasRentings": "Der/die Benutzer:in hat noch ausgeliehene Spiele und kann nicht gelöscht werden.",
+      "notFound": "Der/die Benutzer:in wurde nicht gefunden."
+    }
+  },
+  "faq": {
+    "howManyGames": {
+      "description": "Du kannst maximal <b>{{countOverall}}</b> Spiele gleichzeitig ausleihen. Dabei ist die Anzahl der Spiele pro Reservierung auf <b>{{countReservationGames}}</b> begrenzt. Insegsamt kannst du nur <b>{{countReservation}}</b> aktive Reservierungen haben.",
+      "title": "Wie viele Spiele kann ich ausleihen?"
+    },
+    "pickUpReturnDays": "Wie sind die Abhol- und Rückgabezeiten?",
+    "rentalLength": {
+      "description": "Du kannst ein Spiel für maximal <b>{{days}} Tage</b> ausleihen. Bitte beachte hierbei die Abhol- und Rückgabezeiten.",
+      "title": "Wie lange kann ich ein Spiel ausleihen?"
+    },
+    "reservationLength": {
+      "description": "Deine Reservierung ist für <b>{{count}} Wochen</b> gültig. Bitte beachte, dass du die Spiele innerhalb dieser Zeit abholen musst. Ansonsten wird deine Reservierungen storniert.",
+      "title": "Wie lange ist meine Reservierung gültig?"
+    }
+  },
+  "files": {
+    "acceptedFileSize": "Maximale Größe: {{size}}",
+    "acceptedFileTypes": "Akzeptierte Dateitypen: {{types}}",
+    "dragClickImage_one": "Bild ziehen oder klicken",
+    "dragClickImage_other": "Bilder ziehen oder klicken",
+    "previewFile": "Vorschau: {{fileName}}"
+  },
+  "gameLibrary": {
+    "addRentalCartSuccess": "Das Spiel {{title}} wurde erfolgreich in den Ausleihkorb gelegt.",
+    "alreadyInCart": "Im Ausleihkorb.",
+    "availableAgain": "Vorraussichtlich wieder verfügbar ab dem {{date}}",
+    "eanWithNumber": "EAN: {{ean}}",
+    "gameReserved": "Das Spiel {{title}} wurde erfolgreich reserviert.",
+    "gamesPerPage": "Spiele pro Seite",
+    "incomplete": "Spielbar, aber unvollständig",
+    "noGamesFound": "Keine Spiele gefunden.",
+    "notAvailable": "Das Spiel ist aktuell nicht verfügbar.",
+    "overview": "Spieleübersicht",
+    "rentalCartEmpty": "Dein Ausleihkorb ist leer.",
+    "rentalCartMaxGames": "Maximale Anzahl an Spielen überschritten. ({{count}} Spiele) Bitte entferne {{removeCount}} Spiel(e) aus dem Ausleihkorb, um weitere Spiele hinzuzufügen.",
+    "rentalCartMaxGamesShort": "Maximale Anzahl an Spielen überschritten.",
+    "sorting": {
+      "minAgeAsc": "Alter (aufsteigend)",
+      "minAgeDesc": "Alter (absteigend)",
+      "titleAsc": "Titel A-Z (aufsteigend)",
+      "titleDesc": "Titel Z-A (absteigend)"
+    }
+  },
+  "gameList": {
+    "createDescription": "Erstelle eine neues Spiel",
+    "deleteSuccess": "Das Spiel <b>{{title}}</b> wurde erfolgreich gelöscht.",
+    "description": "Eine Übersicht aller Spiele",
+    "eanModal": "EAN eingeben",
+    "exportSuccess": "Die Labels wurden erfolgreich exportiert.",
+    "gameCreated": "Das Spiel <b>{{title}}</b> wurde erfolgreich erstellt.",
+    "gameOverview": "$t(routes.gameList.title)",
+    "gameUnitRented": "Das Exemplar <b>{{unit}}</b> ist aktuell verliehen.",
+    "gameUpdated": "Das Spiel <b>{{title}}</b> wurde erfolgreich aktualisiert.",
+    "importGames": "$t(action.importGames)",
+    "importGamesDescription": "Hier kannst du Spiele importieren, indem du eine CSV-Datei hochlädst.",
+    "importSuccess": "Die Spiele wurden erfolgreich importiert.",
+    "isExporting": "Exportiere Labels...",
+    "searchForInfos": "Suche nach Informationen zu dem Spiel...",
+    "searchPartialSuccess": "Die Informationen zu dem Spiel: <b>{{title}}</b> wurden teilweise vorausgefüllt. Bitte überprüfe die Angaben und füge ggf. weitere Informationen hinzu!",
+    "searchSuccess": "Die Informationen zu dem Spiel: <b>{{title}}</b> wurden erfolgreich vorausgefüllt. Bitte überprüfe die Angaben!",
+    "updateDescription": "Bearbeite das Spiel: <b>{{title}}</b>"
+  },
+  "mail": {
+    "doubleOptIn": {
+      "content": "Vielen Dank für deine Anmeldung beim BrettBrettspielverleih. \n Bitte bestätige deine E-Mail-Adresse, um deinen Account zu aktivieren.",
+      "link": "E-Mail-Adresse bestätigen",
+      "subject": "Bitte bestätige deine E-Mail-Adresse"
+    },
+    "greating": "Hallo {{name}},",
+    "newMailOptIn": {
+      "content": "Bitte bestätige deine neue E-Mail-Adresse.",
+      "link": "Neue E-Mail-Adresse bestätigen",
+      "subject": "Neue Bitte bestätige deine E-Mail-Adresse"
+    },
+    "rentalConfirmation": {
+      "content": "Du hast folgende Spiele ausgeliehen:",
+      "info": "Bitte bringe bis spätestens **{{dueDate}}** die Spiele wieder zurück.",
+      "return": "Du kannst die Spiele an folgenden Tagen zurückgeben:",
+      "subject": "Ausleihbestätigung"
+    },
+    "rentalOverdue": {
+      "annotation": "Bitte bringe die Spiele so schnell wie möglich zurück, um weitere Kosten zu vermeiden.",
+      "info": "Folgende Spiele sind bereits überfällig:",
+      "subject": "Überfällige Ausleihe"
+    },
+    "rentalReturned": {
+      "info": "Du hast das folgende Spiele zurückgegeben:",
+      "subject": "Rückgabe bestätigt - {{gameTitle}}"
+    },
+    "reservationCanceled": {
+      "contentAdmin": "Die Reservierung mit dem Code **{{code}}** wurde vo System storniert.",
+      "contentOwn": "Deine Reservierung mit dem Code **{{code}}** wurde storniert.",
+      "reason": "Grund:  {{reason}}",
+      "subject": "Reservierung storniert - {{code}}"
+    },
+    "reservationConfirmation": {
+      "info": "Du hast folgende Spiele reserviert:",
+      "pickupInfo": "Sobald deine Spiele abholbereit sind, erhältst du eine E-Mail mit den Abholzeiten.",
+      "subject": "Reservierungsbestätigung - {{code}}"
+    },
+    "reservationPickUpConfirmation": {
+      "info": "Deine reservierten Spiele sind jetzt Abholbereit:",
+      "pickupInfo": "Bitte bringe den Reservierungscode mit, um die Spiele abzuholen.",
+      "pickup_one": "Du kannst die Spiele an folgendem Tag abholen!",
+      "pickup_other": "Du kannst die Spiele an den folgenden Tagen abholen:",
+      "subject": "Deine Spiele sind Abholbereit - {{code}}"
+    },
+    "resetPassword": {
+      "content": "Klicke auf den folgenden Link, um dein Passwort zurückzusetzen.",
+      "link": "Passwort zurücksetzen",
+      "subject": "Passwort zurücksetzen"
+    }
+  },
+  "menu": {
+    "faq": "$t(common.faq)",
+    "gameList": "$t(routes.gameList.title)",
+    "imprint": "$t(common.imprint)",
+    "links": "Links",
+    "logout": "$t(action.logout)",
+    "myAccount": "Mein Konto",
+    "myRentals": "$t(routes.myRentals)",
+    "myReservations": "$t(routes.myReservations)",
+    "privacy": "$t(common.privacy)",
+    "profile": "$t(common.profile)",
+    "rentalList": "$t(routes.rentalList.title)",
+    "reservationList": "$t(routes.reservationList.title)",
+    "settings": "$t(common.settings)",
+    "terms": "$t(common.terms)",
+    "userList": "Benutzer:innen"
+  },
+  "modal": {
+    "cancelReservation": {
+      "message": "Möchtest du die Reservierung mit dem Code <b>{{code}}</b> wirklich stornieren?",
+      "title": "Reservierung stornieren"
+    },
+    "clearCart": {
+      "message": "Möchtest du wirklich alle Spiele aus dem Ausleihkorb entfernen?",
+      "title": "Ausleihkorb leeren"
+    },
+    "confirmPacked": {
+      "message": "Möchtest du die Spiele als abholbereit markieren?",
+      "title": "Spiele abholbereit"
+    },
+    "confirmPickup": {
+      "message": "Möchtest du die Abholung der Reservierung mit dem Code <b>{{code}}</b> bestätigen?",
+      "title": "Abholung bestätigen"
+    },
+    "createReservation": {
+      "message": "Möchtest die Spiele aus deinem Ausleihkorb wirklich reservieren?",
+      "title": "Reservierung bestätigen"
+    },
+    "deleteGame": {
+      "annotation": "<b>Achtung!</b> Folgende Exemplare dieses Spiels sind aktuell verliehen: <b>{{units}}</b>",
+      "message": "Möchtest du das Spiel <b>{{title}}</b> wirklich löschen?",
+      "title": "Spiel löschen"
+    },
+    "deleteUnitReservation": {
+      "message": "Möchtest du die Reservierung des Exemplars <b>{{title}}</b> wirklich stornieren?",
+      "title": "Exemplar stornieren"
+    },
+    "deleteUser": {
+      "message": "Möchtest du den/die Benutzer:in <b>{{title}}</b> wirklich löschen?",
+      "title": "Benutzer:in löschen"
+    },
+    "gameCreated": {
+      "message": "Das Spiel <b>{{title}}</b> wurde erfolgreich erstellt. Du wirst nun zur Spieleliste weitergeleitet.",
+      "title": "Spiel erstellt"
+    },
+    "removeFromCart": {
+      "message": "Möchtest du das Spiel <b>{{title}}</b> wirklich aus dem Ausleihkorb entfernen?",
+      "title": "Aus Ausleihkorb entfernen"
+    },
+    "returnRental": {
+      "message": "Möchtest du die Rückgabe des Spiels <b>{{title}}</b> wirklich bestätigen?",
+      "title": "Rückgabe bestätigen"
+    },
+    "unsavedChanges": {
+      "message": "Du hast ungespeicherte Änderungen. Möchtest du die Seite wirklich verlassen?",
+      "title": "Ungespeicherte Änderungen"
+    },
+    "userCreated": {
+      "message": "Der/die Benutzer:in <b>{{email}}</b> wurde erfolgreich erstellt. Du wirst nun zur Benutzer:innenliste weitergeleitet.",
+      "title": "Benutzer:in erstellt"
+    }
+  },
+  "myRentals": {
+    "tabs": {
+      "active": "Aktive Ausleihen",
+      "history": "Vergangene Ausleihen"
+    }
+  },
+  "myReservations": {
+    "cancelingReservation": "Reservierung wird storniert...",
+    "deletingUnit": "Exemplar wird storniert...",
+    "reservationCanceled": "Die Reservierung mit dem Code: <b>{{ code }}</b> wurde erfolgreich storniert.",
+    "unitDeleted": "Das Exemplar <b>{{title}}</b> wurde erfolgreich storniert."
+  },
+  "notification": {
+    "emailVerification": {
+      "message": "Du hast deine E-Mail-Adresse noch nicht bestätigt. Bitte überprüfe dein Postfach und bestätige deine E-Mail-Adresse oder klicke <a>hier</a>, um eine neue Bestätigungs-E-Mail zu senden.",
+      "title": "E-Mail-Adresse bestätigen"
+    },
+    "termsAcceptance": {
+      "message": "Bitte klicke <a>hier</a>, um die Datenschutzbestimmungen zu akzeptieren.",
+      "title": "Datenschutzbestimmung akzeptieren"
+    }
+  },
+  "profile": {
+    "description": "Hier kannst du deine persönlichen Daten einsehen.",
+    "editProfile": "Profil bearbeiten",
+    "passwordChanged": "Dein Passwort wurde erfolgreich geändert.",
+    "title": "$t(common.profile)",
+    "updateSuccess": "Deine Daten wurden erfolgreich aktualisiert."
+  },
+  "rental": {
+    "includeAll": "Zeige alle Ausleihen",
+    "returnSuccess": "Die Rückgabe des Spiels wurde erfolgreich bestätigt.",
+    "updateRental": "Ausleihe ({{code}}) bearbeiten",
+    "updateSuccess": "Die Ausleihe wurde erfolgreich aktualisiert."
+  },
+  "rentalCart": {
+    "notAvailable": "Das Spiel ist leider nicht mehr verfügbar.",
+    "notAvailableTooltip_one": "Ein Spiel ist leider nicht mehr verfügbar. Bitte entferne es aus dem Ausleihkorb, um fortzufahren.",
+    "notAvailableTooltip_other": "Einige Spiele sind leider nicht mehr verfügbar. Bitte entferne sie aus dem Ausleihkorb, um fortzufahren.",
+    "reservationCode": "Dein Reservierungscode:",
+    "reservationCodeInfo_one": "Du erhälst eine E-Mail sobald deine Spiele zur Abholung bereit liegen. Bitte Beachte das du bei der Abholung deinen Reservierungscode bereithälst. \n\n Viel Spaß beim Spielen!",
+    "reservationCodeInfo_other": "Du erhälst eine E-Mail sobald deine Spiele zur Abholung bereit liegen. Bitte Beachte das du bei der Abholung deinen Reservierungscode bereithälst. \n\n Viel Spaß beim Spielen!",
+    "reservationDayInfo": "Du hast eine E-Mail mit den Informationen erhalten und kannst deine Reservierung an folgenden Tagen abholen:",
+    "reservationSuccess": "Die Reservierung wurde erfolgreich erstellt.",
+    "reservationUnitsInfo_one": "Du hast folgendes Spiel reserviert:",
+    "reservationUnitsInfo_other": "Du hast folgende Spiele reserviert:",
+    "title": "$t(common.rentalCart)"
+  },
+  "reservation": {
+    "cancelReason": "Grund für die Stornierung",
+    "cancelSuccess": "Die Reservierung wurde erfolgreich storniert.",
+    "confirmPackedSuccess": "Die Spiele wurden erfolgreich als abholbereit markiert.",
+    "confirmPickupSuccess": "Die Abholung der Reservierung wurde erfolgreich bestätigt.",
+    "includeAll": "Zeige alle Reservierungen",
+    "updateReservation": "Reservierung ({{code}}) bearbeiten",
+    "updateSuccess": "Die Reservierung wurde erfolgreich aktualisiert."
+  },
+  "routes": {
+    "faq": "Oft gestellte Fragen",
+    "gameList": {
+      "create": "Spiel erstellen",
+      "title": "Spieleverwaltung"
+    },
+    "myRentals": "Meine Ausleihen",
+    "myReservations": "Meine Reservierungen",
+    "profile": "$t(common.profile)",
+    "rentalCart": "$t(common.rentalCart)",
+    "rentalList": {
+      "title": "Ausleihen"
+    },
+    "reservationList": {
+      "title": "Reservierungen"
+    },
+    "settings": "$t(reservation.overDue.settings)",
+    "userList": {
+      "create": "Benutzer:in erstellen",
+      "title": "Benutzer:innen Übersicht"
+    }
+  },
+  "settings": {
+    "description": "Hier kannst du unter anderem die Abhol- und Rückgabezeiten einsehen und anpassen.",
+    "pickUpReturnDays": "$t(common.pickUpReturnDays)",
+    "title": "$t(common.settings)",
+    "updateSuccess": "Die Einstellungen wurden erfolgreich aktualisiert."
+  },
+  "terms": {
+    "accepted": "Datenschutzbestimmung und Nutzungsbedingungen wurden akzeptiert.",
+    "changedTerms": "Geänderte Datenschutzbestimmung und Nutzungsbedingungen",
+    "changedTermsDescription": "Bitte akzeptiere die geänderten Nutzungsbedingungen und die Datenschutzbestimmung, um weiterhin Spiele ausleihen zu können.",
+    "privacyHeadline": "Informationspflichten zur Datenverarbeitung gem. Art. 13 DSGV",
+    "termsHeadline": "Nutzungsbedingungen für den Brettspieleverleih",
+    "unacctedTerms": "Bitte akzeptiere die Datenschutzbestimmung, um Spiele ausleihen zu können."
+  },
+  "userList": {
+    "createDescription": "Erstelle einen neuen Benutzer:in",
+    "deleteSuccess": "Der/die Benutzer:in <b>{{email}}</b> wurde erfolgreich gelöscht.",
+    "description": "Eine Übersicht aller Benutzer:innen",
+    "doubleOptInLoading": "Opt-In wird gesendet...",
+    "doubleOptInSuccess": "Die E-Mail mit dem Opt-In wurde erfolgreich an <b>{{email}}</b> gesendet.",
+    "updateDescription": "Bearbeite den Benutzer:in: <b>{{email}}</b>",
+    "userUpdated": "Der/die Benutzer:in <b>{{email}}</b> wurde erfolgreich aktualisiert."
+  }
+}

@@ -1,0 +1,16 @@
+fragment TermsData on Terms {
+  key
+  texts
+}
+
+query term($key: TermsType!) {
+  term(key: $key) {
+    ...TermsData
+  }
+}
+
+query terms {
+  terms {
+    ...TermsData
+  }
+}

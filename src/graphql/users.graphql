@@ -1,0 +1,93 @@
+fragment UserMinimalData on User {
+  id
+  firstname
+  lastname
+  email
+}
+
+fragment UserData on User {
+  ...UserMinimalData
+  emailVerified
+  createdAt
+  updatedAt
+  street
+  postalCode
+  city
+  telephone
+  newMailToken: activeToken(type: NEW_EMAIL)
+  role {
+    ...RoleData
+  }
+}
+
+query me {
+  me {
+    ...UserData
+  }
+}
+
+query User($id: String!) {
+  user(id: $id) {
+    ...UserData
+  }
+}
+
+query Users {
+  users {
+    ...UserData
+  }
+}
+
+query usersPaginated($offset: Int!, $limit: Int!, $orderBy: [OrderInput!], $filterBy: [FilterInput!]) {
+  usersPaginated(offset: $offset, limit: $limit, orderBy: $orderBy, filterBy: $filterBy) {
+    nodes {
+      ...UserData
+    }
+    pageInfo {
+      currentPage
+      totalPages
+      perPage
+    }
+    totalCount
+  }
+}
+
+mutation acceptTerms($terms: [TermsType!]!) {
+  acceptTerms(terms: $terms)
+}
+
+mutation sendDoubleOptInMail($email: String!) {
+  sendDoubleOptInMail(email: $email)
+}
+
+mutation updateMe($data: UpdateMeInput!) {
+  updateMe(data: $data) {
+    ...UserData
+  }
+}
+
+mutation sendDoubleOptInMailToMe {
+  sendDoubleOptInMailToMe
+}
+
+mutation sendDoubleOptInNewMailToMe {
+  sendDoubleOptInNewMailToMe
+}
+
+mutation createUser($data: CreateUserInput!) {
+  createUser(data: $data) {
+    ...UserData
+  }
+}
+
+mutation updateUser($id: String!, $data: UpdateUserInput!) {
+  updateUser(id: $id, data: $data) {
+    ...UserData
+  }
+}
+
+mutation softDeleteUser($id: String!) {
+  softDeleteUser(id: $id) {
+    ...UserData
+  }
+}

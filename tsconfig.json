@@ -1,0 +1,85 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@api/*": [
+        "./src/api/*"
+      ],
+      "@typings/*": [
+        "./src/typings/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
+      "@graphql/*": [
+        "./src/graphql/*"
+      ],
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@locales/*": [
+        "./src/locales/*"
+      ],
+      "@shared/*": [
+        "./src/shared/*"
+      ],
+      "@theme/*": [
+        "./src/theme/*"
+      ],
+      "@features/*": [
+        "./src/features/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@email/*": [
+        "./src/email/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/**/*",
+    "i18nconfig.mjs"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

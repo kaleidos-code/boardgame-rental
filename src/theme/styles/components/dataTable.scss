@@ -1,0 +1,49 @@
+.mantine-datatable {
+  .mantine-datatable-row-expansion-cell {
+    background-color: var(--mantine-color-gray-0);
+
+    .mantine-datatable-row-expansion-cell-content {
+      border-bottom: none;
+    }
+  }
+
+  thead {
+    background-color: var(--mantine-color-gray-0);
+    z-index: 2;
+    .mantine-Table-th {
+      padding: 12px 24px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 18px;
+      background-color: var(--mantine-color-gray-0);
+    }
+  }
+
+  tbody {
+    vertical-align: top;
+    .mantine-Table-td {
+      overflow: hidden;
+      padding: 18px 24px;
+      vertical-align: middle;
+      background-color: var(--mantine-color-white);
+    }
+  }
+}
+
+.mantine-datatable-action-header {
+  background-color: var(--mantine-color-white);
+  padding: 6px 12px;
+  border: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-gray-3);
+  border-bottom: none;
+}
+
+.mantine-datatable-column-filtered {
+  &::before {
+    font-family: 'Material Icons Outlined';
+    content: 'filter_alt';
+    color: var(--mantine-color-gray-7);
+    position: absolute;
+    right: 0;
+    margin-right: var(--mantine-spacing-xs);
+  }
+}

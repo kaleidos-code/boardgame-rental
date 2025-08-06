@@ -1,0 +1,50 @@
+fragment RentalData on Rental {
+  id
+  bookingId
+  status
+  reservationId
+  createdAt
+  dueDate 
+  returnedAt
+  gameUnit {
+    ...GameUnitData
+    game {
+      ...GameData
+    }
+  }
+  user {
+    ...UserMinimalData
+  }
+}
+
+query rentalsPaginated($offset: Int!, $limit: Int!, $includeAll: Boolean, $orderBy: [OrderInput!], $filterBy: [FilterInput!]) {
+  rentalsPaginated(offset: $offset, limit: $limit, includeAll: $includeAll, orderBy: $orderBy, filterBy: $filterBy) {
+    nodes {
+      ...RentalData
+    }
+    pageInfo {
+      currentPage
+      totalPages
+      perPage
+    }
+    totalCount
+  }
+}
+
+mutation createRentalsByReservation($data: CreateRentalInput!) {
+  createRentalsByReservation(data: $data) {
+    ...RentalData
+  }
+}
+
+mutation updateRental($id: String!, $data: UpdateRentalInput!) {
+  updateRental(id: $id, data: $data) {
+    ...RentalData
+  }
+}
+
+mutation returnRental($id: String!) {
+  returnRental(id: $id) {
+    ...RentalData
+  }
+}

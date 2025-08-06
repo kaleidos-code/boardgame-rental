@@ -1,0 +1,11 @@
+fragment RoleData on Role {
+  id
+  key
+  texts
+}
+
+query Roles {
+  roles {
+    ...RoleData
+  }
+}

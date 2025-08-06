@@ -1,0 +1,11 @@
+fragment TagData on Tag {
+  id
+  key
+  texts
+}
+
+query Tags {
+  tags {
+    ...TagData
+  }
+}

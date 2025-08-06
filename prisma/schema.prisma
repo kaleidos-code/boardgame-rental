@@ -1,0 +1,381 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+//generator typegraphql {
+//  provider = "typegraphql-prisma"
+//  output   = "../prisma/generated/type-graphql"
+//}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ConfigType {
+  APP
+}
+
+enum WeekDay {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+enum TermsType {
+  PRIVACY
+  TERMS
+}
+
+enum TokenType {
+  NEW_EMAIL
+  PASSWORD
+  OPT_IN
+}
+
+enum ReservationStatus {
+  PENDING
+  PACKED
+  CANCELLED
+  COMPLETED
+}
+
+enum RentalStatus {
+  RENTED
+  RETURNED
+  OVERDUE
+}
+
+model Account {
+  id                 String    @id @default(uuid())
+  userId             String
+  providerType       String
+  providerId         String
+  providerAccountId  String
+  refreshToken       String?
+  accessToken        String?
+  accessTokenExpires DateTime?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+  user               User      @relation(fields: [userId], references: [id])
+
+  @@unique([providerId, providerAccountId])
+}
+
+model AppConfig {
+  key   String @unique @id
+
+  signUpDisabled Boolean @default(true)
+}
+
+model File {
+  id String @id @default(uuid())
+
+  modelId String
+  model   String
+
+  fileName String
+  path     String
+  mimeType String
+  key      String
+  meta     Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([modelId, model, key])
+}
+
+model GameUnitReservation {
+  reservationId String
+  gameUnitId    String
+
+  reservation Reservation @relation(fields: [reservationId], references: [id], onDelete: Cascade)
+  gameUnit    GameUnit    @relation(fields: [gameUnitId], references: [id], onDelete: Cascade)
+
+  @@id([reservationId, gameUnitId])
+}
+
+model GameUnit {
+  id     String @id @default(uuid())
+  gameId String
+
+  game Game @relation(fields: [gameId], references: [id], onDelete: Cascade)
+
+  unitShortId String
+  incomplete  Boolean @default(false)
+  inStock     Boolean @default(true)
+
+  weight Float?
+
+  rentals      Rental[]
+  reservations GameUnitReservation[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([gameId, unitShortId])
+}
+
+model Game {
+  id  String @id @default(uuid())
+  ean String?
+
+  gameShortId Int    @default(autoincrement())
+
+  title     String
+  publisher String
+
+  minAge      Int
+  maxAge      Int? @default(99)
+  minPlayers  Int
+  maxPlayers  Int?
+  minDuration Int
+  maxDuration Int?
+
+  gameUnits GameUnit[]
+  tags      GameTag[]
+
+  deletedAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([title, ean])
+}
+
+model GameTag {
+  gameId String
+  tagId  String
+
+  game Game @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  tag  Tag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@id([gameId, tagId])
+}
+
+model PickUpDay {
+  dayOfWeek WeekDay @id @unique
+  
+  pickUpTimes PickUpTime[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PickUpTime {
+  from     String
+  to       String
+
+  dayOfWeek WeekDay
+  pickUpDay PickUpDay @relation(fields: [dayOfWeek], references: [dayOfWeek], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@id([dayOfWeek, from, to])
+}
+
+model Permission {
+  id String @id @default(uuid())
+
+  ability  String
+  resource String
+
+  roles RolePermission[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Rental {
+  id        String  @id @default(uuid())
+  bookingId String  @unique
+
+  rentedAt   DateTime
+  returnedAt DateTime?
+  dueDate    DateTime
+  lastReminder DateTime?
+
+  userId        String
+  gameUnitId    String
+  reservationId String?
+
+  status      RentalStatus? @default(RENTED)
+
+  user        User         @relation(fields: [userId], references: [id])
+  gameUnit    GameUnit     @relation(fields: [gameUnitId], references: [id], onDelete: Cascade)
+  reservation Reservation? @relation(fields: [reservationId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Reservation {
+  id              String @id @default(uuid())
+  reservationCode String
+
+  cancelledAt DateTime?
+
+  status ReservationStatus
+
+  userId     String
+
+  user      User     @relation(fields: [userId], references: [id])
+  gameUnits GameUnitReservation[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  rental    Rental[]
+}
+
+model Role {
+  id  String @id @default(uuid())
+  key String
+
+  permissions RolePermission[]
+  users       User[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model RolePermission {
+  roleId       String
+  permissionId String
+
+  scope String?
+
+  role       Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@id([roleId, permissionId])
+}
+
+model PostalCode {
+  code  String @id @unique
+  city  String
+  state String
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  userId       String
+  expires      DateTime
+  sessionToken String   @unique
+  accessToken  String   @unique
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  user         User     @relation(fields: [userId], references: [id])
+}
+
+model Tag {
+  id  String @id @default(uuid())
+  key String @unique
+
+  games GameTag[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Text {
+  id    String @id @default(uuid())
+  key   String
+  value String
+  lang  String
+
+  modelId String
+  model   String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([key, lang, modelId, model])
+}
+
+model ValidationToken {
+  token String @unique
+
+  type TokenType
+  meta Json?
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  validatedAt DateTime?
+  createdAt   DateTime  @default(now())
+
+  @@id([userId, type])
+}
+
+model Terms {
+  key   TermsType @unique @id
+
+  userTerms UserTerms[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model UserTerms {
+  userId String
+  termsKey TermsType
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  terms Terms @relation(fields: [termsKey], references: [key])
+
+  acceptedAt DateTime
+
+  @@id([userId, termsKey])
+}
+
+model User {
+  id         String    @id @default(uuid())
+  firstname  String
+  lastname   String
+  email      String    @unique
+  password   String
+  birthdate  DateTime?
+  street     String?
+  city       String?
+  postalCode String?
+  telephone  String?
+
+  emailVerified DateTime?
+
+  roleId String
+  role   Role   @relation(fields: [roleId], references: [id])
+
+  reservations Reservation[]
+
+  rentals Rental[]
+
+  createdAt DateTime  @default(now())
+  deletedAt DateTime?
+  updatedAt DateTime  @updatedAt
+
+  userTerms UserTerms[]
+
+  validationTokens ValidationToken[]
+
+  accounts Account[]
+  sessions Session[]
+}

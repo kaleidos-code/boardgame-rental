@@ -1,0 +1,61 @@
+fragment ReservationData on Reservation {
+  id
+  reservationCode
+  status
+  user {
+    ...UserMinimalData
+  }
+  gameUnits {
+    ...GameUnitData
+    game {
+      ...GameData
+    }
+  }
+  overDue @client
+  cancelledAt
+  createdAt
+  updatedAt
+}
+
+query myReservations($status: [ReservationStatus!]) {
+  myReservations(status: $status) {
+    ...ReservationData
+  }
+}
+
+query reservationsPaginated($offset: Int!, $limit: Int!, $includeAll: Boolean, $orderBy: [OrderInput!], $filterBy: [FilterInput!]) {
+  reservationsPaginated(offset: $offset, limit: $limit, includeAll: $includeAll, orderBy: $orderBy, filterBy: $filterBy) {
+    nodes {
+      ...ReservationData
+    }
+    pageInfo {
+      currentPage
+      totalPages
+      perPage
+    }
+    totalCount
+  }
+}
+
+mutation createReservation($games: [CreateReservationInput!]!) {
+  createReservation(games: $games) {
+    ...ReservationData
+  }
+}
+
+mutation updateReservation($id: String!, $data: UpdateReservationInput!) {
+  updateReservation(id: $id, data: $data) {
+    ...ReservationData
+  }
+}
+mutation setReservationPacked($id: String!) {
+  setReservationPacked(id: $id) {
+    ...ReservationData
+  }
+}
+
+mutation cancelReservation($id: String!, $data: CancelReservationInput) {
+  cancelReservation(id: $id, data: $data) {
+    ...ReservationData
+  }
+}
