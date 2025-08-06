@@ -24,13 +24,13 @@ import { authConfig } from '../../../api/lib/auth'
 
 import { loggingPlugin } from './logging'
 
-// const config = {
-//   output: 'export',
-//   api: {
-//     // Disable body parsing (required for file uploads)
-//     bodyParser: false
-//   }
-// }
+const config = {
+  output: 'export',
+  api: {
+    // Disable body parsing (required for file uploads)
+    bodyParser: false
+  }
+}
 
 const { handleRequest } = createYoga({
   schema: await buildSchema({

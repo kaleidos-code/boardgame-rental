@@ -116,6 +116,23 @@ export const GameLibraryList: React.FC<Props> = ({ data, loading, onPageChange }
               value={data.pageInfo.currentPage}
               onChange={(value) => handleOnPageChange(value)}
               total={data.pageInfo.totalPages}
+              getItemProps={(page) => ({
+                'aria-label': t('pagination.goToPage', { page })
+              })}
+              getControlProps={(control) => {
+                switch (control) {
+                  case 'previous':
+                    return { 'aria-label': t('pagination.previousPage') }
+                  case 'next':
+                    return { 'aria-label': t('pagination.nextPage') }
+                  case 'first':
+                    return { 'aria-label': t('pagination.firstPage') }
+                  case 'last':
+                    return { 'aria-label': t('pagination.lastPage') }
+                  default:
+                    return {}
+                }
+              }}
             />
           )}
         </Flex>

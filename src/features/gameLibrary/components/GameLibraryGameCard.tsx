@@ -74,6 +74,7 @@ export const GameLibraryGameCard: React.FC<Props> = ({ data, onAddToCart, onGame
               w="auto"
               fit='contain'
               src={coverImage?.url || ''}
+              alt={t('alt.coverImage', { title: data?.title || '' })}
               fallbackSrc="/cover_fallback.png"
             />
           </Anchor>

@@ -116,7 +116,7 @@ export const TableRowExpansion: React.FC<Props> = ({ data }) => {
               key={image.id}
               src={image.url}
               blurDataURL={image.dataUrl}
-              alt={record.title}
+              alt={t('alt.coverImage', { title: record.title })}
             />
           ))}
         </Group>

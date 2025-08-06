@@ -13,17 +13,18 @@ export const colors: Partial<MantineThemeColors> = {
     '#244F90',
     '#142968'
   ],
-  orange: [
-    '#FFF8F6',
-    '#FFEBE6',
-    '#FFD4CC',
-    '#FFBDB2',
-    '#FFA699',
-    '#FF8F7F',
-    '#E6705F',
-    '#CC5140',
-    '#B33220',
-    '#991300'
+  purple: [
+    '#F5F5FF',
+    '#E8E8FF',
+    '#D1D1FF',
+    '#B9B9FF',
+    '#A2A2FF',
+    '#5D5DFF',
+    '#7474FF',
+    '#5D5DFF',
+    '#4646FF',
+    '#2F2FFF',
+    '#1818FF'
   ],
   gray: [
     '#F8FAFB',

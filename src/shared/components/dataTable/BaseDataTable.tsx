@@ -235,6 +235,20 @@ export const BaseDataTable = function <T extends DataTableRecord> ({
             totalRecords
           })}
           onPageChange={handlePageChange}
+          getPaginationControlProps={(control) => {
+            switch (control) {
+              case 'previous':
+                return { 'aria-label': t('pagination.previousPage') }
+              case 'next':
+                return { 'aria-label': t('pagination.nextPage') }
+              case 'first':
+                return { 'aria-label': t('pagination.firstPage') }
+              case 'last':
+                return { 'aria-label': t('pagination.lastPage') }
+              default:
+                return {}
+            }
+          }}
         />
       </Box>
     </Flex>

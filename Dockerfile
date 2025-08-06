@@ -33,15 +33,15 @@ RUN adduser --system --uid 1001 nextjs
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
 
-COPY --from=builder --chown=nodejs:nodejs /app/node_modules ./node_modules
-COPY --from=builder --chown=nodejs:nodejs /app/package.json .
-COPY --from=builder --chown=nodejs:nodejs /app/yarn.lock .  
-COPY --from=builder --chown=nodejs:nodejs /app/.yarn ./.yarn
-COPY --from=builder --chown=nodejs:nodejs /app/.yarnrc.yml ./
-COPY --from=builder --chown=nodejs:nodejs /app/next.config.mjs ./
-COPY --from=builder --chown=nodejs:nodejs /app/i18nconfig.mjs ./
-COPY --from=builder --chown=nodejs:nodejs /app/public ./public
-COPY --from=builder --chown=nodejs:nodejs /app/prisma ./prisma/
+COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=nextjs:nodejs /app/package.json .
+COPY --from=builder --chown=nextjs:nodejs /app/yarn.lock .  
+COPY --from=builder --chown=nextjs:nodejs /app/.yarn ./.yarn
+COPY --from=builder --chown=nextjs:nodejs /app/.yarnrc.yml ./
+COPY --from=builder --chown=nextjs:nodejs /app/next.config.mjs ./
+COPY --from=builder --chown=nextjs:nodejs /app/i18nconfig.mjs ./
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/prisma ./prisma/
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 

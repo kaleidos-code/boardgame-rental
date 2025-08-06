@@ -130,6 +130,7 @@ export const GameLibraryInfoModal: React.FC<Props> = ({ game, hideReserveButton,
           </CardBadge>
           )}
           <ImageCarousel
+            title={game?.title || ''}
             height={300}
             indicatorOffset={-40}
             images={game?.files || []}

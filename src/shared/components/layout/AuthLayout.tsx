@@ -103,6 +103,7 @@ export const AuthLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
           <Anchor href='/'>
             <Image
               src="/logo.png"
+              alt={t('alt.logo')}
               w={{
                 base: 200,
                 md: 300

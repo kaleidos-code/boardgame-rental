@@ -4,15 +4,19 @@ import { Image, Flex } from '@mantine/core'
 import { Carousel } from '@mantine/carousel'
 import React from 'react'
 import { FileDataFragment } from '@typings/graphql'
+import { useTranslation } from 'react-i18next'
 
 export type ImageCarouselProps = {
+  title: string
   images: FileDataFragment[]
   fallback?: string
   height?: number | string
   indicatorOffset?: number
 }
 
-export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, indicatorOffset, height, fallback }) => {
+export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, indicatorOffset, height, fallback, title }) => {
+  const { t } = useTranslation()
+
   return (
     <Carousel
       height={height || 200}
@@ -30,6 +34,8 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, indicatorO
           h="100%"
           w="auto"
           fit='contain'
+          alt={t('alt.fallbackImage', { title })}
+
           src={fallback}
         />
       )}
@@ -46,6 +52,8 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, indicatorO
             <Image
               h="100%"
               w="auto"
+              alt={t('alt.coverImage', { title })}
+
               src={image.url || ''}
             />
           </Flex>

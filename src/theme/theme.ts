@@ -8,10 +8,9 @@ import { fontSizes, headings } from './augmentation/typography'
 
 const themeOverride = createTheme({
   components,
-  primaryColor: 'orange',
+  primaryColor: 'purple',
   primaryShade: 5,
   headings,
-  fontFamily: 'Raleway',
   fontSizes,
   colors
 })

@@ -60,6 +60,7 @@ export const RentalPaginatedListItem: React.FC<Props> = ({ rental }) => {
               sm: '100%'
             }}
             fit='cover'
+            alt={t('alt.coverImage', { title: rental.gameUnit?.game.title })}
             src={coverImage}
           />
         </Flex>

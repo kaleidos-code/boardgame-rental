@@ -53,6 +53,11 @@
     "toGameLibrary": "Zur Spieleübersicht",
     "toHome": "Zur Startseite"
   },
+  "alt": {
+    "coverImage": "Bild der Verpackung von: {{title}}",
+    "fallbackImage": "Standardbild von: {{title}}",
+    "logo": "Kinderakademie Fulda Logo"
+  },
   "app": {
     "subtitle": "Leih dir kostenlos Brettspiele aus",
     "title": "Brettspiele-Verleih"
@@ -576,6 +581,14 @@
       "message": "Bitte klicke <a>hier</a>, um die Datenschutzbestimmungen zu akzeptieren.",
       "title": "Datenschutzbestimmung akzeptieren"
     }
+  },
+  "pagination": {
+    "firstPage": "Erste Seite",
+    "goToPage": "Gehe zu Seite {{page}}",
+    "lastPage": "Letzte Seite",
+    "nextPage": "Nächste Seite",
+    "pageOf": "Seite {{page}} von {{total}}",
+    "previousPage": "Vorherige Seite"
   },
   "profile": {
     "description": "Hier kannst du deine persönlichen Daten einsehen.",

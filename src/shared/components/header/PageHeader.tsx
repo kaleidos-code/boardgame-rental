@@ -63,6 +63,8 @@ export const PageHeader: React.FC<React.PropsWithChildren> = ({ children }) => {
     >
       <Flex
         flex="0 1 auto"
+        align="center"
+        justify="center"
       >
         <Anchor href='/' style={{ height: '40px' }}>
           <img src="/logo.png" alt="Logo" style={{ height: '100%' }} />
@@ -76,6 +78,7 @@ export const PageHeader: React.FC<React.PropsWithChildren> = ({ children }) => {
           </Text>
           <Text
             size="sm"
+            display={xs ? 'none' : 'block'}
           >
             {t('app.subtitle')}
           </Text>

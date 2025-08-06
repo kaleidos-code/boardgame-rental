@@ -94,29 +94,23 @@ export const RentalCartMenu: React.FC = () => {
         }
       }}
     >
-      <Menu.Target>
-        <Box
-          style={{
-            position: 'relative'
-          }}
-        >
-          <Indicator
-            disabled={!rentalCartCount}
-            offset={5}
-            label={rentalCartCount}
-            size={16}
+      <Indicator
+        disabled={!rentalCartCount}
+        offset={5}
+        label={rentalCartCount}
+        size={16}
+      >
+        <Menu.Target>
+          <Button
+            {...(xs && {
+              size: 'xs'
+            })}
+            variant='outline'
           >
-            <Button
-              {...(xs && {
-                size: 'xs'
-              })}
-              variant='outline'
-            >
-              <MaterialIcon icon='shopping_cart' />
-            </Button>
-          </Indicator>
-        </Box>
-      </Menu.Target>
+            <MaterialIcon icon='shopping_cart' />
+          </Button>
+        </Menu.Target>
+      </Indicator>
 
       <Menu.Dropdown
         w={xs ? '100%' : 400}

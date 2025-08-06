@@ -53,6 +53,7 @@ export const RentalCartGameListItem: React.FC<Props> = ({ game, isLast, onRemove
               md: '150px'
             }}
             fit='cover'
+            alt={t('alt.coverImage', { title: game.title })}
             src={coverImage?.url || ''}
             fallbackSrc="/cover_fallback.png"
           />

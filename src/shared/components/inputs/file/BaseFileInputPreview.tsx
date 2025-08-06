@@ -33,7 +33,7 @@ export const BaseFileInputPreview: React.FC<BaseFileInputPreviewProps> = ({ data
           h="100%"
           w="auto"
           fit='cover'
-
+          alt={t('alt.coverImage', { title: data.fileName })}
           src={data.url || ''}
         />
       )}

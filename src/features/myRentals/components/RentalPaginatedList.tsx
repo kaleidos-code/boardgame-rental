@@ -8,6 +8,7 @@ import {
   useRentalsPaginatedQuery
 } from '@typings/graphql'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { RENTAL_MAX_PAGE_SIZE } from '../constants/constants'
 
@@ -18,6 +19,7 @@ type Props = {
 }
 
 export const RentalPaginatedList: React.FC<Props> = ({ isHistory }) => {
+  const { t } = useTranslation()
   const fetchVariables = React.useRef({})
 
   const [loading, setLoading] = React.useState(true)
@@ -113,6 +115,24 @@ export const RentalPaginatedList: React.FC<Props> = ({ isHistory }) => {
                     value={data?.rentalsPaginated.pageInfo.currentPage}
                     onChange={handlePageChange}
                     total={data?.rentalsPaginated.pageInfo.totalPages}
+                    getItemProps={(page) => ({
+                      'aria-label': t('pagination.goToPage', { page })
+                    })}
+                    getControlProps={(control) => {
+                      switch (control) {
+                        case 'previous':
+                          return { 'aria-label': t('pagination.previousPage') }
+                        case 'next':
+                          return { 'aria-label': t('pagination.nextPage') }
+                        case 'first':
+                          return { 'aria-label': t('pagination.firstPage') }
+                        case 'last':
+                          return { 'aria-label': t('pagination.lastPage') }
+                        default:
+                          return {}
+                      }
+                    }}
+
                   />
                 </Flex>
               )}
