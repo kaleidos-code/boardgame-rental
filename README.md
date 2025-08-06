@@ -47,8 +47,11 @@ cd boardgame-rental
 # Umgebungsdatei erstellen
 cp env.example .env
 
+# Anwendung mit Docker starten (baut automatisch alle Images)
+yarn docker:app
+```
 
-Bearbeiten Sie die `.env` Datei mit Ihrer spezifischen Konfiguration:
+**Optional:** Bearbeiten Sie die `.env` Datei mit Ihrer spezifischen Konfiguration:
 
 ```env
 # Datenbank-Konfiguration
@@ -69,10 +72,6 @@ MAIL_PASSWORD=ihr_smtp_passwort
 # Authentifizierung
 NEXTAUTH_SECRET=ihr_nextauth_secret
 NEXTAUTH_URL=http://localhost:3000
-```
-
-# Anwendung mit Docker starten (baut automatisch alle Images)
-yarn docker:app
 ```
 
 **Das war's!** Die Anwendung ist nun unter [http://localhost:3000](http://localhost:3000) verfügbar.
