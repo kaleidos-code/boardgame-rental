@@ -23,6 +23,9 @@ RUN yarn build
 FROM node:18-alpine as production
 WORKDIR /app
 
+# Install OpenSSL to fix Prisma issues
+RUN apk add --no-cache openssl
+
 RUN corepack enable && corepack prepare yarn@4.2.2 --activate
 
 ENV NODE_ENV=production
@@ -45,9 +48,14 @@ COPY --from=builder --chown=nextjs:nodejs /app/prisma ./prisma/
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+# Copy startup script
+COPY startup.sh /app/startup.sh
+RUN chmod +x /app/startup.sh && chown nextjs:nodejs /app/startup.sh
+
 USER nextjs
 
 EXPOSE 3090
 
 ENV HOSTNAME="0.0.0.0"
-CMD ["yarn", "start" ]
+
+CMD ["/app/startup.sh"]
