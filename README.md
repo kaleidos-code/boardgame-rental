@@ -2,6 +2,10 @@
 
 Ein modernes, quelloffenes Brettspiel-Verleihsystem basierend auf Next.js, GraphQL und PostgreSQL. Perfekt für Spielecafés, Verleihgeschäfte und Gemeindebibliotheken, die ihr Brettspiel-Inventar und Verleihvorgänge effizient verwalten möchten.
 
+## 🏛️ Hintergrund
+
+Entwickelt von der kaleidos:code GmbH im Auftrag der Stadt Fulda für die Kinderakademie Fulda. Mit Zustimmung der Stadt als Open Source unter MIT-Lizenz veröffentlicht und für den Einsatz in anderen Einrichtungen (Bibliotheken, Spielecafés, Vereine) neutralisiert.
+
 ## 🎯 Funktionen
 
 - **Benutzerverwaltung**: Vollständige Benutzerregistrierung, Authentifizierung und rollenbasierte Zugriffskontrolle
